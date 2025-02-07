@@ -17,7 +17,7 @@ public class MicroServer {
     public static Map<String, Method> services = new HashMap();
 
     public static void main(String[] args) throws Exception {
-        
+
         loadComponents(args);
         System.out.println(simulateRequests("/greeting"));
         System.out.println(simulateRequests("/pi"));
@@ -26,33 +26,17 @@ public class MicroServer {
     }
 
     private static void loadComponents(String[] args) throws Exception {
-        for (int i=0; i<args.length; i++) {
-            Class temp = Class.forName(args[i]);
-            if (!temp.isAnnotationPresent(RestController.class)) {
-                System.exit(0);
-            }
-            for (Method m : temp.getDeclaredMethods()) {
-                if (m.isAnnotationPresent(GetMapping.class)) {
-                    GetMapping a = m.getAnnotation(GetMapping.class);
-                    services.put(a.value(), m);
-
-                }
-
-            }
-        }
-            /*
         Class c = Class.forName(args[0]);
         if (!c.isAnnotationPresent(RestController.class)) {
             System.exit(0);
         }
-        for(Method m: c.getDeclaredMethods()){
-            if(m.isAnnotationPresent(GetMapping.class)){
+        for (Method m : c.getDeclaredMethods()) {
+            if (m.isAnnotationPresent(GetMapping.class)) {
                 GetMapping a = m.getAnnotation(GetMapping.class);
-                services.put(a.value(),m);
-                
+                services.put(a.value(), m);
+
             }
-             */
-        
+        }
 
     }
 
