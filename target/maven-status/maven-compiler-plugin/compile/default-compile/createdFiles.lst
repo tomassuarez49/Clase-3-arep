@@ -1,0 +1,12 @@
+com\mycompany\microspring\InvokePrintMembers.class
+com\mycompany\microspring\RunTests.class
+co\edu\eci\arep\microspring\server\RequestParam.class
+com\mycompany\microspring\MicroSpring.class
+co\edu\eci\arep\microspring\server\GetMapping.class
+com\mycompany\microspring\InvokeMain.class
+co\edu\eci\arep\microspring\server\GreetingController.class
+com\mycompany\microspring\Foo.class
+co\edu\eci\arep\microspring\server\MathController.class
+com\mycompany\microspring\Test.class
+co\edu\eci\arep\microspring\server\MicroServer.class
+co\edu\eci\arep\microspring\server\RestController.class
